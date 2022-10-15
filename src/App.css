@@ -9,6 +9,7 @@ body {
     background-image: linear-gradient(to bottom, #47bfff, #fff);
     background-repeat: no-repeat;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .navbar-container {
@@ -25,7 +26,7 @@ body {
 }
 
 .navbar-title-container {
-    gap: 20px;
+    gap: 30px;
     display:flex;
     flex-direction: row;
     align-self: center;
@@ -36,6 +37,11 @@ body {
     cursor: pointer;
     height: 20px;
     align-self: center;
+    transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.navbar-title-container img:hover{
+    transform: scale(1.2);
 }
 
 .searchbar-container { 
@@ -57,11 +63,20 @@ body {
 
 .searchbar-button button {
     background-color: #20f5b5;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 10px;
     height: 40px;
     color: white;
     padding: 10px 12px;
+}
+
+.searchbar-button button:hover {
+    background-color: #09c38b;
+}
+
+.searchbar-button button:active {
+    box-shadow: inset -4px -4px rgba(0, 0, 0, 0.25);
 }
 
 .red-heart-icon {
@@ -100,6 +115,11 @@ body {
     background-color: #fff;
     margin: 0 10px;
     margin-bottom: 10px;
+    transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.pokemon-card:hover {
+    transform: scale(1.1);
 }
 .pokemon-image-container {
     padding: 0px 5px;
