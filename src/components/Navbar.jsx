@@ -11,11 +11,16 @@ const Navbar = (props) =>{
         window.open("https://github.com/joaosamuelgomes");
     }
 
+    const onClickPokeImage = () => {
+        window.open("https://pokeapi.co");
+    }
+
     return (
         <nav className="navbar-container">
             <div className="navbar-title-container">
                 <h1>Pokédex</h1>
-                <img src={gitCat} onClick={onClickGitImage}></img>
+                <img src={gitCat} alt="Git Profile"onClick={onClickGitImage}></img>
+                <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeApi" onClick={onClickPokeImage}></img>
             </div>
             <div className="navbar-favorites-number">
                 {favoritePokemons.length} ❤ {favoritePokemons.length>1 ? <span>favoritos</span> : <span>favorito</span>}
